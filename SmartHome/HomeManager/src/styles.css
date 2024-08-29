@@ -1,1 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+	margin: 0;
+	padding: 0;
+	background: #bf8046;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #c39166, #b37229);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ccc0a7, hwb(26 51% 12%)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
