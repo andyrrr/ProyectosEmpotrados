@@ -1,0 +1,2 @@
+/opt/poky/5.0.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ar qc libraspPinManagerLib.a CMakeFiles/raspPinManagerLib.dir/raspPinManager.c.o
+/opt/poky/5.0.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ranlib libraspPinManagerLib.a

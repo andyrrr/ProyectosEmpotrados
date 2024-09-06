@@ -13,29 +13,43 @@ static int getPinValue(int pin){
 }
 
 void pinMode(int pin, int mode){
-	int gpioPin = getPinValue(pin);
-	if (gpioPin == -1) {
-		printf("Pin no válido.\n");
-		return;
-	}
-	char path[50];
-	sprintf(path, "/sys/class/gpio/gpio%d/direction", gpioPin);
-	FILE *f = fopen(path, "w");
-	if (f == NULL) {
-		perror("Error abriendo el archivo de dirección");
-		return;
-	}
+    int gpioPin = getPinValue(pin);
+    if (gpioPin == -1) {
+        printf("Pin no válido.\n");
+        return;
+    }
 
-	if (mode == OUTPUT) {
-		fprintf(f, "out");
-	} else if (mode == INPUT) {
-		fprintf(f, "in");
-	} else {
-		printf("Modo no válido.\n");
-	}
-	
-	fclose(f);
+    char path[100];
+    
+    // Exportar el pin
+    sprintf(path, "/sys/class/gpio/export");
+    FILE *f = fopen(path, "w");
+    if (f == NULL) {
+        perror("Error abriendo el archivo de exportación");
+        return;
+    }
+    fprintf(f, "%d", gpioPin);
+    fclose(f);
+    
+    usleep(100000);  // 100 ms
 
+    // Configurar la dirección del pin
+    sprintf(path, "/sys/class/gpio/gpio%d/direction", gpioPin);
+    f = fopen(path, "w");
+    if (f == NULL) {
+        perror("Error abriendo el archivo de dirección");
+        return;
+    }
+
+    if (mode == OUTPUT) {
+        fprintf(f, "out");
+    } else if (mode == INPUT) {
+        fprintf(f, "in");
+    } else {
+        printf("Modo no válido.\n");
+    }
+
+    fclose(f);
 }
 
 void digitalWrite(int pin, int value){
