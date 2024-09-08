@@ -13,6 +13,10 @@ export class LoginComponent {
   ingresar(){
     console.log(this.user)
     console.log(this.pass)
+
+    if (this.user == "admin" && this.pass=="1234"){
+      window.location.href="/managment"
+    }
   }
 
 }
