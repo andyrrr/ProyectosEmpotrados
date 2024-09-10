@@ -53,6 +53,23 @@
   }
 
 
+  .btn-salida {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.btn-salida i {
+    color: #ffffff;
+}
+
+.btn-salida:hover i {
+    color: #4d4848;
+}
+
+
+
   .fotos {
     flex-direction: column;
     height: 100%;

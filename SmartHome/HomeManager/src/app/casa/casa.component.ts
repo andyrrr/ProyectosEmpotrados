@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Objeto } from '../Interfaces/objeto';
 import { EstadoService } from '../Services/estado.service';
 import { interval, Subscription, switchMap, timeout } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-casa',
@@ -18,9 +19,7 @@ export class CasaComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription = new Subscription;
 
-  constructor(private service:EstadoService){
-    //this.dummy2()
-    //this.actualizar()
+  constructor(private service:EstadoService, private cookieService: CookieService){
     this.sus()
 
   }
@@ -29,7 +28,7 @@ export class CasaComponent implements OnInit, OnDestroy {
     this.subscription = interval(1000) // Cada 1 segundo
     .pipe(
       switchMap(() => this.service.getSelectedList("getStatus")), 
-      timeout(1000) // Timeout después de 5 segundos
+      timeout(3000) // Timeout después de 5 segundos
     )
     .subscribe(
       (data: Objeto[]) => {
@@ -62,8 +61,9 @@ export class CasaComponent implements OnInit, OnDestroy {
 
 
   actualizarLista(lista: Objeto[], nuevoObjeto: Objeto) {
+    nuevoObjeto.nombre = nuevoObjeto.nombre.replace(/Puerta/g, '').trim();
     const existente = lista.find(item => item.nombre === nuevoObjeto.nombre);
-    
+
     if (existente) {
       // Si ya existe, actualizamos su estado
       existente.estado = nuevoObjeto.estado;
@@ -81,45 +81,20 @@ export class CasaComponent implements OnInit, OnDestroy {
     }
   }
 
-  dummy(){
-    this.luces.push(new Objeto("Cuarto 1", "1", "luz"))
-    this.luces.push(new Objeto("Cuarto 2", "0", "luz"))
-    this.luces.push(new Objeto("Sala", "0" , "luz"))
-    this.luces.push(new Objeto("Comedor", "1", "luz"))
-    this.luces.push(new Objeto("Cocina", "1", "luz")) 
-
-
-    this.puertas.push(new Objeto("Cuarto 1", "1", "puerta"))
-    this.puertas.push(new Objeto("Cuarto 2", "0" , "puerta"))
-    this.puertas.push(new Objeto("Delantera", "1", "puerta"))
-    this.puertas.push(new Objeto("Trasera", "0", "puerta"))
-  }
-
-
-  dummy2(){
-    this.objetos.push(new Objeto("Cuarto 1", "1", "luz"))
-    this.objetos.push(new Objeto("Cuarto 2", "0", "luz"))
-    this.objetos.push(new Objeto("Sala", "0" , "luz"))
-    this.objetos.push(new Objeto("Comedor", "1", "luz"))
-    this.objetos.push(new Objeto("Cocina", "1", "luz")) 
-
-
-    this.objetos.push(new Objeto("Cuarto 1", "1", "puerta"))
-    this.objetos.push(new Objeto("Cuarto 2", "0" , "puerta"))
-    this.objetos.push(new Objeto("Delantera", "1", "puerta"))
-    this.objetos.push(new Objeto("Trasera", "0", "puerta"))
-  }
-
-
   cambiarEstado(event: Event, obj: any): void {
     const inputElement = event.target as HTMLInputElement;
     obj.estado = inputElement.checked ? '1' : '0';
 
-    this.service.update("putLight", obj).pipe(
+    const nombre = obj.nombre.replace(/\s+/g, '').toLowerCase();
+
+
+    this.service.getSelectedList("putLight", nombre +"/" + obj.estado).pipe(
       timeout(500)  // 500 milisegundos = 0.5 segundos
     ).subscribe({
       next: (data) => {
         console.log("actualizada");
+        this.objetos = data
+        this.actualizar()
       }, 
       error: (err) => {
         // Revertir el checkbox si ocurre un error o timeout
@@ -133,5 +108,11 @@ export class CasaComponent implements OnInit, OnDestroy {
   cambiarEstadoGeneral(event: Event){
     const obj:Objeto = new Objeto("todas", "0", "luz")
     this.cambiarEstado(event, obj)
+  }
+
+  logout() {
+    // Eliminar la cookie llamada 'auth-token'
+    this.cookieService.delete('auth-token');
+    window.location.reload()
   }
 }
