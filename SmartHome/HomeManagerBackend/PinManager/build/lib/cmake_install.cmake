@@ -50,3 +50,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/lib/../include/raspPinManager.h")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/lib/libcameraCaptureLib.a")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/lib/../include/camera_capture.h")
+endif()
+

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <camera_capture.h>
 
 #define JSON_BUFF_SIZE 	1024
 #define LIGHT_STATE_FILE "ligh_state.bin"
@@ -17,7 +18,7 @@
 #define P_PIN_DELANTERA	0
 #define P_PIN_TRASERA	11
 #define P_PIN_CUARTO_1	9
-#define P_PIN_CUARTO_2	10
+#define P_PIN_CUARTO_2	25
 
 
 // Función para guardar un array en formato binario
@@ -68,8 +69,8 @@ char* getHouseStatus(int *light_array){
 	
 	int l_cuarto_1	= light_array[0]; 
 	int l_cuarto_2	= light_array[1];
-	int l_comedor   = light_array[2];
-	int l_sala 	= light_array[3];
+	int l_comedor   = light_array[3];
+	int l_sala 	= light_array[2];
 	int l_cocina	= light_array[4];
 
 	int p_delantera = digitalRead(P_PIN_DELANTERA);
@@ -181,6 +182,8 @@ int main(int argc, char *argv[]){
 
 			set_light(num_light,state,light_array);
 			break;
+		case 4:
+			take_picture("/dev/video0",640,480,V4L2_PIX_FMT_MJPEG,"capture.jpg");
 		default:
 			printf("def");
 			break;

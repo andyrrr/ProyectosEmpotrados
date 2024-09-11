@@ -207,6 +207,19 @@ raspPinManagerLib/fast:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/raspPinManagerLib.dir/build.make lib/CMakeFiles/raspPinManagerLib.dir/build
 .PHONY : raspPinManagerLib/fast
 
+#=============================================================================
+# Target rules for targets named cameraCaptureLib
+
+# Build rule for target.
+cameraCaptureLib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cameraCaptureLib
+.PHONY : cameraCaptureLib
+
+# fast build rule for target.
+cameraCaptureLib/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cameraCaptureLib.dir/build.make lib/CMakeFiles/cameraCaptureLib.dir/build
+.PHONY : cameraCaptureLib/fast
+
 pin_manager.o: pin_manager.c.o
 .PHONY : pin_manager.o
 
@@ -245,6 +258,7 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... cameraCaptureLib"
 	@echo "... pin_manager"
 	@echo "... raspPinManagerLib"
 	@echo "... pin_manager.o"

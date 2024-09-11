@@ -93,6 +93,7 @@ pin_manager_EXTERNAL_OBJECTS =
 pin_manager: CMakeFiles/pin_manager.dir/pin_manager.c.o
 pin_manager: CMakeFiles/pin_manager.dir/build.make
 pin_manager: lib/libraspPinManagerLib.a
+pin_manager: lib/libcameraCaptureLib.a
 pin_manager: CMakeFiles/pin_manager.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable pin_manager"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pin_manager.dir/link.txt --verbose=$(VERBOSE)

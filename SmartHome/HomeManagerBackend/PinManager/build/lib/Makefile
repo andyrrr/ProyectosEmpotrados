@@ -195,6 +195,44 @@ raspPinManagerLib/fast:
 	cd /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/raspPinManagerLib.dir/build.make lib/CMakeFiles/raspPinManagerLib.dir/build
 .PHONY : raspPinManagerLib/fast
 
+# Convenience name for target.
+lib/CMakeFiles/cameraCaptureLib.dir/rule:
+	cd /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/cameraCaptureLib.dir/rule
+.PHONY : lib/CMakeFiles/cameraCaptureLib.dir/rule
+
+# Convenience name for target.
+cameraCaptureLib: lib/CMakeFiles/cameraCaptureLib.dir/rule
+.PHONY : cameraCaptureLib
+
+# fast build rule for target.
+cameraCaptureLib/fast:
+	cd /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cameraCaptureLib.dir/build.make lib/CMakeFiles/cameraCaptureLib.dir/build
+.PHONY : cameraCaptureLib/fast
+
+camera_capture.o: camera_capture.c.o
+.PHONY : camera_capture.o
+
+# target to build an object file
+camera_capture.c.o:
+	cd /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cameraCaptureLib.dir/build.make lib/CMakeFiles/cameraCaptureLib.dir/camera_capture.c.o
+.PHONY : camera_capture.c.o
+
+camera_capture.i: camera_capture.c.i
+.PHONY : camera_capture.i
+
+# target to preprocess a source file
+camera_capture.c.i:
+	cd /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cameraCaptureLib.dir/build.make lib/CMakeFiles/cameraCaptureLib.dir/camera_capture.c.i
+.PHONY : camera_capture.c.i
+
+camera_capture.s: camera_capture.c.s
+.PHONY : camera_capture.s
+
+# target to generate assembly for a file
+camera_capture.c.s:
+	cd /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cameraCaptureLib.dir/build.make lib/CMakeFiles/cameraCaptureLib.dir/camera_capture.c.s
+.PHONY : camera_capture.c.s
+
 raspPinManager.o: raspPinManager.c.o
 .PHONY : raspPinManager.o
 
@@ -233,7 +271,11 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... cameraCaptureLib"
 	@echo "... raspPinManagerLib"
+	@echo "... camera_capture.o"
+	@echo "... camera_capture.i"
+	@echo "... camera_capture.s"
 	@echo "... raspPinManager.o"
 	@echo "... raspPinManager.i"
 	@echo "... raspPinManager.s"

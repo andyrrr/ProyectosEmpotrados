@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/raspPinMangerLib/build/usr")
+  set(CMAKE_INSTALL_PREFIX "/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/usr")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -104,7 +104,7 @@ CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/raspPinMangerLib/build/CMakeFiles/pkgRedirects
 
 //No help, variable specified on the command line.
-CMAKE_INSTALL_PREFIX:PATH=/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/raspPinMangerLib/build/usr
+CMAKE_INSTALL_PREFIX:PATH=/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/usr
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/opt/poky/5.0.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ld

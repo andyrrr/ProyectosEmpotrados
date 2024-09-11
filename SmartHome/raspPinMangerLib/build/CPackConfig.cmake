@@ -28,7 +28,7 @@ set(CPACK_DEFAULT_PACKAGE_DESCRIPTION_FILE "/usr/share/cmake-3.22/Templates/CPac
 set(CPACK_DEFAULT_PACKAGE_DESCRIPTION_SUMMARY "test_gpio built using CMake")
 set(CPACK_GENERATOR "STGZ;TGZ;TZ")
 set(CPACK_INSTALL_CMAKE_PROJECTS "/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/raspPinMangerLib/build;test_gpio;ALL;/")
-set(CPACK_INSTALL_PREFIX "/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/raspPinMangerLib/build/usr")
+set(CPACK_INSTALL_PREFIX "/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/usr")
 set(CPACK_MODULE_PATH "")
 set(CPACK_NSIS_DISPLAY_NAME "test_gpio 0.1.1")
 set(CPACK_NSIS_INSTALLER_ICON_CODE "")

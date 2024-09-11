@@ -1,7 +1,7 @@
-CMakeFiles/pin_manager.dir/pin_manager.c.o: \
- /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/pin_manager.c \
+lib/CMakeFiles/cameraCaptureLib.dir/camera_capture.c.o: \
+ /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/lib/camera_capture.c \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/stdc-predef.h \
- /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/include/raspPinManager.h \
+ /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/lib/../include/camera_capture.h \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/stdio.h \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/bits/libc-header-start.h \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/features.h \
@@ -78,7 +78,6 @@ CMakeFiles/pin_manager.dir/pin_manager.c.o: \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/strings.h \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/bits/strings_fortified.h \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/bits/string_fortified.h \
- /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/include/camera_capture.h \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/fcntl.h \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/bits/fcntl.h \
  /opt/poky/5.0.3/sysroots/cortexa7t2hf-neon-vfpv4-poky-linux-gnueabi/usr/include/bits/fcntl-32.h \

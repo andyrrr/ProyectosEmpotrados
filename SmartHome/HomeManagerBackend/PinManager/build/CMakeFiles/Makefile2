@@ -81,6 +81,7 @@ clean: lib/clean
 
 # Recursive "all" directory target.
 lib/all: lib/CMakeFiles/raspPinManagerLib.dir/all
+lib/all: lib/CMakeFiles/cameraCaptureLib.dir/all
 .PHONY : lib/all
 
 # Recursive "preinstall" directory target.
@@ -89,6 +90,7 @@ lib/preinstall:
 
 # Recursive "clean" directory target.
 lib/clean: lib/CMakeFiles/raspPinManagerLib.dir/clean
+lib/clean: lib/CMakeFiles/cameraCaptureLib.dir/clean
 .PHONY : lib/clean
 
 #=============================================================================
@@ -96,14 +98,15 @@ lib/clean: lib/CMakeFiles/raspPinManagerLib.dir/clean
 
 # All Build rule for target.
 CMakeFiles/pin_manager.dir/all: lib/CMakeFiles/raspPinManagerLib.dir/all
+CMakeFiles/pin_manager.dir/all: lib/CMakeFiles/cameraCaptureLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pin_manager.dir/build.make CMakeFiles/pin_manager.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pin_manager.dir/build.make CMakeFiles/pin_manager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles --progress-num=1,2 "Built target pin_manager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles --progress-num=3,4 "Built target pin_manager"
 .PHONY : CMakeFiles/pin_manager.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/pin_manager.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pin_manager.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles 0
 .PHONY : CMakeFiles/pin_manager.dir/rule
@@ -124,7 +127,7 @@ CMakeFiles/pin_manager.dir/clean:
 lib/CMakeFiles/raspPinManagerLib.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/raspPinManagerLib.dir/build.make lib/CMakeFiles/raspPinManagerLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/raspPinManagerLib.dir/build.make lib/CMakeFiles/raspPinManagerLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles --progress-num=3,4 "Built target raspPinManagerLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles --progress-num=5,6 "Built target raspPinManagerLib"
 .PHONY : lib/CMakeFiles/raspPinManagerLib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -142,6 +145,32 @@ raspPinManagerLib: lib/CMakeFiles/raspPinManagerLib.dir/rule
 lib/CMakeFiles/raspPinManagerLib.dir/clean:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/raspPinManagerLib.dir/build.make lib/CMakeFiles/raspPinManagerLib.dir/clean
 .PHONY : lib/CMakeFiles/raspPinManagerLib.dir/clean
+
+#=============================================================================
+# Target rules for target lib/CMakeFiles/cameraCaptureLib.dir
+
+# All Build rule for target.
+lib/CMakeFiles/cameraCaptureLib.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cameraCaptureLib.dir/build.make lib/CMakeFiles/cameraCaptureLib.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cameraCaptureLib.dir/build.make lib/CMakeFiles/cameraCaptureLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles --progress-num=1,2 "Built target cameraCaptureLib"
+.PHONY : lib/CMakeFiles/cameraCaptureLib.dir/all
+
+# Build rule for subdir invocation for target.
+lib/CMakeFiles/cameraCaptureLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/cameraCaptureLib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/naranjo/Documentos/2S2023/Empotrados/ProyectosEmpotrados/SmartHome/HomeManagerBackend/PinManager/build/CMakeFiles 0
+.PHONY : lib/CMakeFiles/cameraCaptureLib.dir/rule
+
+# Convenience name for target.
+cameraCaptureLib: lib/CMakeFiles/cameraCaptureLib.dir/rule
+.PHONY : cameraCaptureLib
+
+# clean rule for target.
+lib/CMakeFiles/cameraCaptureLib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/cameraCaptureLib.dir/build.make lib/CMakeFiles/cameraCaptureLib.dir/clean
+.PHONY : lib/CMakeFiles/cameraCaptureLib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

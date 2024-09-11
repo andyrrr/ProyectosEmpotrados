@@ -53,4 +53,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/pin_manager.dir/DependInfo.cmake"
   "lib/CMakeFiles/raspPinManagerLib.dir/DependInfo.cmake"
+  "lib/CMakeFiles/cameraCaptureLib.dir/DependInfo.cmake"
   )

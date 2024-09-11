@@ -13,7 +13,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 add_executable (pin_manager pin_manager.c)
 
 #link against required libraries
-target_link_libraries(pin_manager raspPinManagerLib)
+target_link_libraries(pin_manager raspPinManagerLib cameraCaptureLib)
 
 #install the binary
 install (TARGETS pin_manager DESTINATION bin)

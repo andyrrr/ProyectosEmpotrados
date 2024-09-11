@@ -1,0 +1,2 @@
+/opt/poky/5.0.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ar qc libcameraCaptureLib.a CMakeFiles/cameraCaptureLib.dir/camera_capture.c.o
+/opt/poky/5.0.3/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-ranlib libcameraCaptureLib.a
