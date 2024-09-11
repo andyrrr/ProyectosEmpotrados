@@ -16,7 +16,7 @@ export abstract class ConexionService<T> {
 
 
   getRuta() {
-    return "http://192.168.50.195:5000";
+    return "http://192.168.1.154:5000";
   }
 
   getSelectedList(atributo: string, atributo2?: string) {

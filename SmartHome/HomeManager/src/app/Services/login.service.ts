@@ -14,3 +14,17 @@ export class LoginService extends ConexionService<string> {
     super(httpClient, route);
   }
 }
+
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class FotoService extends ConexionService<string> {
+  constructor(
+    protected override httpClient: HttpClient,
+    protected override route: Router
+  ) {
+    super(httpClient, route);
+  }
+}

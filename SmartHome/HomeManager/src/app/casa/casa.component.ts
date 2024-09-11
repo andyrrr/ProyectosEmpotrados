@@ -3,6 +3,7 @@ import { Objeto } from '../Interfaces/objeto';
 import { EstadoService } from '../Services/estado.service';
 import { interval, Subscription, switchMap, timeout } from 'rxjs';
 import { CookieService } from 'ngx-cookie-service';
+import { FotoService } from '../Services/login.service';
 
 @Component({
   selector: 'app-casa',
@@ -14,12 +15,13 @@ export class CasaComponent implements OnInit, OnDestroy {
   puertas:Objeto[] = []
   objetos:Objeto[] = []
 
-  foto:Objeto = new Objeto("test", "test", "foto");
+  imageUrl: string | undefined;
+
 
 
   private subscription: Subscription = new Subscription;
 
-  constructor(private service:EstadoService, private cookieService: CookieService){
+  constructor(private service:EstadoService, private cookieService: CookieService, private fotoService:FotoService){
     this.sus()
 
   }
@@ -34,10 +36,12 @@ export class CasaComponent implements OnInit, OnDestroy {
       (data: Objeto[]) => {
         this.objetos = data
         this.actualizar()
+        console.log(data)
       },
       (error) => {
         if (error.name === 'TimeoutError') {
           console.error('Timeout: No se recibió respuesta en el tiempo esperado');
+          this.sus()
         } else {
           console.error('Error al obtener el estado:', error);
         }
@@ -108,6 +112,15 @@ export class CasaComponent implements OnInit, OnDestroy {
   cambiarEstadoGeneral(event: Event){
     const obj:Objeto = new Objeto("todas", "0", "luz")
     this.cambiarEstado(event, obj)
+  }
+
+  tomarFoto() {
+    this.imageUrl = undefined;
+  
+    setTimeout(() => {
+      const timestamp = new Date().getTime(); // Genera un valor único
+      this.imageUrl = `${this.fotoService.getRuta()}/getPhoto?${timestamp}`;
+    }, 500); // Espera 1 segundo (1000 milisegundos)
   }
 
   logout() {
