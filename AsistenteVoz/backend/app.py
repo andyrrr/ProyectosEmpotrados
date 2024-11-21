@@ -3,8 +3,12 @@ from flask import Flask,jsonify,request
 import subprocess
 import json
 import os
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+
+CORS(app)
 
 # Crea la carpeta "uploads" si no existe
 UPLOAD_FOLDER = 'uploads'

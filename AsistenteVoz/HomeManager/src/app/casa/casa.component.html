@@ -1,0 +1,40 @@
+<!--  -->
+
+<div class="elementos">
+
+  <h1 class="Titulo">Music Manager</h1>  
+</div>
+
+  <div class="parent">
+
+    <div class="fotos">
+
+      <div class="subtitulo">
+        Agrega aquí tu .mp3
+      </div>
+
+
+
+
+      <form (ngSubmit)="uploadFile()" #uploadForm="ngForm" class="upload-form">
+        <div class="file-input-container">
+          <label for="file" class="file-label">Seleccionar archivo .mp3</label>
+          <input id="file" type="file" (change)="onFileSelected($event)" accept=".mp3" class="file-input" />
+        </div>
+        <p class="file-name"> {{ fileName }} </p>
+        <button class = "upload-button" type="submit" [disabled]="!selectedFile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="svg-icon">
+            <g stroke-width="2" stroke-linecap="round" stroke="#fff" fill-rule="evenodd" clip-rule="evenodd">
+              <!-- Flecha hacia arriba -->
+              <path d="M12 17V5M8 9l4-4 4 4" />
+              <!-- Caja o base -->
+              <rect x="4" y="17" width="16" height="3" rx="1.5" />
+            </g>
+          </svg></button>
+      </form>
+
+
+
+
+    </div>
+    </div> 
